@@ -1,0 +1,4 @@
+location.txt
+*.log
+.php_session
+x

