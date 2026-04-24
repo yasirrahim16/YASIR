@@ -1,228 +1,192 @@
-```markdown
-# ▧ Y-VOIDSYNDICATE ▧
-### Advanced Educational Laboratory for Browser Fingerprinting & Device Telemetry
-================================================================================
+<div align="center">
 
-[![Author](https://img.shields.io/badge/Author-Yasir_Rahim-blue.svg)](https://github.com/yasirrahim16)
-[![Platform](https://img.shields.io/badge/Platform-Termux%20%7C%20Linux%20%7C%20Kali-success.svg)](#)
-[![Version](https://img.shields.io/badge/Version-1.0.0--Stable-orange.svg)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](#)
+  <img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&height=250&section=header&text=YASIRDEV&fontSize=90&animation=fadeIn&fontAlignY=40&desc=Advanced%20Educational%20Telemetry%20Laboratory&descAlignY=65&descSize=20" />
 
-> **⚠️ CRITICAL SECURITY & ETHICAL DISCLAIMER ⚠️**
-> 
-> **Y-VOIDSYNDICATE** is developed STRICTLY for educational purposes, academic research, and authorized penetration testing. 
-> The creator (**Yasir Rahim**) and contributors are NOT responsible for any misuse, illegal data harvesting, or privacy violations caused by this tool. 
-> 
-> By cloning, downloading, or using this repository, you agree to the following:
-> 1. You will only deploy this tool on devices and networks you own or have explicit, written consent to test.
-> 2. You will not use this software for malicious surveillance, unauthorized tracking, or phishing.
-> 3. You understand that unauthorized data collection violates global privacy laws (e.g., GDPR, CCPA, PECA).
-> 
-> **THINK BEFORE YOU TYPE. STAY LEGAL. STAY ETHICAL.**
+  <p align="center">
+    <b>"Building the next generation of Cyber Security Engineers."</b><br>
+    <i>A professional, transparent, and ethical framework for browser telemetry research.</i>
+  </p>
+
+  <p align="center">
+    <a href="https://github.com/yasirrahim16"><img src="https://img.shields.io/badge/Developer-Yasir_Rahim-007EC6?style=for-the-badge&logo=github" alt="Author"></a>
+    <img src="https://img.shields.io/badge/Environment-Termux%20%7C%20Linux-2EA44F?style=for-the-badge&logo=linux" alt="Platform">
+    <img src="https://img.shields.io/badge/Build-v2.0_Stable-F28D1A?style=for-the-badge" alt="Version">
+    <img src="https://img.shields.io/badge/License-MIT-D93F0B?style=for-the-badge" alt="License">
+  </p>
+
+</div>
 
 ---
 
-## 📖 Table of Contents
-1. [About the Project](#-about-the-project)
-2. [Technology Stack](#-technology-stack)
-3. [Key Features & Telemetry Capabilities](#-key-features--telemetry-capabilities)
-4. [Prerequisites & Setup](#-prerequisites--setup)
-5. [Architectural Logic (How It Works)](#-architectural-logic-how-it-works)
-6. [Comprehensive Usage Guide](#-comprehensive-usage-guide)
-7. [In-Depth Troubleshooting & FAQ](#-in-depth-troubleshooting--faq)
-8. [Project Roadmap](#-project-roadmap)
-9. [Credits & License](#-credits--license)
+## 🛑 Critical Ethical Guidelines
+
+> **ACADEMIC USE ONLY** > **YASIRDEV** is engineered strictly for educational demonstrations, authorized laboratory environments, and academic research. 
+> 
+> * **No Malicious Use:** This is not a tool for unauthorized tracking or surveillance.
+> * **Consent is Mandatory:** Only deploy this against networks and devices you own, or where you have explicit, written permission from the owner.
+> * **Liability:** The developer (Yasir Rahim) assumes zero responsibility for any misuse or legal violations caused by end-users. 
+> 
+> **By using this software, you commit to ethical practices and global privacy standards.**
 
 ---
 
-## 🔍 About the Project
-
-**Y-VOIDSYNDICATE** is an advanced, lightweight web-based telemetry and hardware fingerprinting framework. Built specifically for cyber security instructors, students, and penetration testers, it serves as a practical laboratory to demonstrate the vulnerabilities inherent in modern web browsers and the extent of data exposure during regular internet browsing.
-
-In modern cybersecurity, understanding the attacker's perspective is crucial to building robust defenses. This framework simulates a "watering hole" or targeted data-extraction payload. It proves that a simple web link, when clicked without caution, can expose highly sensitive hardware and geographical metadata. 
-
-Originally designed for the Termux mobile environment to allow on-the-go security auditing, it is fully compatible with professional Linux distributions like Kali Linux and Parrot OS.
+## 📑 Table of Contents
+1. [Platform Overview](#-platform-overview)
+2. [Technology Architecture](#-technology-architecture)
+3. [Telemetry Extraction Features](#-telemetry-extraction-features)
+4. [Installation & Deployment](#-installation--deployment)
+5. [Step-by-Step Usage Guide](#-step-by-step-usage-guide)
+6. [Educational Breakdown (How it works)](#-educational-breakdown-how-it-works)
+7. [Troubleshooting Center](#-troubleshooting-center)
+8. [Future Roadmap](#-future-roadmap)
+9. [Open Source License](#-open-source-license)
 
 ---
 
-## ⚙️ Technology Stack
+## 🏫 Platform Overview
 
-This project utilizes a minimal yet highly effective stack to ensure compatibility across low-resource environments (like mobile phones) and high-end security workstations.
+Welcome to **YASIRDEV**. In the field of cyber security, understanding how data is exposed is the first step to securing it. This project serves as a practical, hands-on laboratory for students and penetration testers. 
 
-| Component | Technology | Purpose |
+It demonstrates how modern web browsers interact with hardware sensors and APIs, proving that simply visiting a webpage can expose significant digital footprints, including geospatial data and hardware specifications. It is highly optimized for mobile environments like Termux, while remaining fully functional on advanced distributions like Kali Linux.
+
+---
+
+## 💻 Technology Architecture
+
+YASIRDEV uses a lightweight, highly efficient stack designed to run flawlessly on both low-end mobile processors and high-end workstations.
+
+| Layer | Technology Used | Educational Purpose |
 | :--- | :--- | :--- |
-| **Frontend Payload** | HTML5 / CSS3 | Provides a deceptive, clean UI for the target. |
-| **Telemetry Engine** | Advanced JavaScript | Queries the `navigator` and `window` objects for hardware/sensor data. |
-| **Backend Processor** | PHP (Version 7.4+) | Parses incoming GET requests, handles IP extraction, and formats logs. |
-| **Deployment Env.** | Termux / GNU Linux | The host operating system running the local server. |
-| **Tunneling** | Cloudflared (Optional) | Exposes the local PHP server to the public internet securely. |
+| **User Interface** | HTML5 / CSS3 | Demonstrates modern web structuring. |
+| **Extraction Engine** | JavaScript (ES6) | Queries the Document Object Model (DOM) and APIs. |
+| **Data Processing** | PHP 7.4+ | Server-side handling and log generation. |
+| **Networking** | Cloudflared Tunnel | Securely exposes the local server to external networks. |
 
 ---
 
-## 🚀 Key Features & Telemetry Capabilities
+## 📡 Telemetry Extraction Features
 
-The **Y-VOIDSYNDICATE** engine is capable of extracting multiple layers of digital identity from a consenting target's browser.
+When a consenting user interacts with the YASIRDEV laboratory, the following data points are ethically extracted for demonstration:
 
-* **🌐 Network Fingerprinting:**
-    * **Public IP Extraction:** Automatically logs the target's ISP-provided IP address via server-side remote address headers.
-* **📍 Geospatial Intelligence (GEOINT):**
-    * **High-Precision GPS:** Utilizes the HTML5 Geolocation API to extract exact Latitude and Longitude coordinates.
-    * **Automated Mapping:** Dynamically generates a direct Google Maps URL for instant physical location verification.
-* **💻 Hardware & Device Telemetry:**
-    * **Platform Detection:** Identifies the underlying operating system (e.g., Linux armv81 for Android, Win32 for Windows).
-    * **Screen Resolution Logging:** Captures display width and height to deduce the device form factor (Mobile vs. Desktop).
-    * **RAM/Memory Profiling:** Queries `navigator.deviceMemory` to estimate the hardware power of the target device.
-    * **Battery Status API:** Captures current battery percentage and charging state (where supported by browser security sandboxes).
-* **🕵️ Software & Browser Identity:**
-    * **User-Agent Parsing:** Captures the raw User-Agent string to identify the browser type and version.
-    * **Language Preferences:** Logs the primary system language configured by the user.
-* **📝 Automated Professional Logging:**
-    * Formats all intercepted data into a clean, human-readable terminal output (`location.txt`) with precise timestamps.
+### 🌍 Network & Location
+* **Public IP Address:** Captured securely via backend server headers (`REMOTE_ADDR`).
+* **Precise Geolocation:** Leverages HTML5 API for exact Latitude and Longitude mapping.
+* **Live Maps Integration:** Automatically formats coordinates into a direct Google Maps verification link.
+
+### ⚙️ Hardware Fingerprinting
+* **Platform Identity:** OS detection (e.g., Windows, Android armv8l).
+* **Display Metrics:** Screen resolution logging to determine device form factor.
+* **Processing Power:** `navigator.deviceMemory` extraction to estimate RAM.
+* **Battery Diagnostics:** API query for current charge percentage and power state.
+
+### 🌐 Software Telemetry
+* **User-Agent String:** Detailed browser version and rendering engine data.
+* **System Language:** Target's configured localized language settings.
 
 ---
 
-## 🛠️ Prerequisites & Setup
+## 🛠️ Installation & Deployment
 
-Whether you are running this in a mobile Termux environment or a dedicated Kali Linux machine, follow these precise steps.
+Follow these instructions to set up the laboratory on your local machine.
 
-### Phase 1: Environment Preparation
+### Phase 1: Dependency Setup
 
-**For Termux (Android) Users:**
+**For Termux Users:**
 ```bash
-# Update and upgrade package repositories
+# Refresh system packages
 pkg update -y && pkg upgrade -y
 
-# Install required core packages
+# Install core utilities
 pkg install git php wget curl openssh -y
 
-# Grant Termux access to local storage (optional but recommended for log backups)
+# Enable local storage access
 termux-setup-storage
 
 ```
 **For Linux (Kali/Ubuntu/Debian) Users:**
 ```bash
-# Update repositories
+# Refresh system packages
 sudo apt update && sudo apt upgrade -y
 
-# Install PHP and Git
+# Install core utilities
 sudo apt install php git curl wget -y
 
 ```
-### Phase 2: Cloning the Repository
+### Phase 2: System Cloning
 ```bash
-# Clone the master branch of Y-VOIDSYNDICATE
-git clone [https://github.com/yasirrahim16/Y-VOIDSYNDICATE.git](https://github.com/yasirrahim16/Y-VOIDSYNDICATE.git)
+# Clone the YASIRDEV core repository
+git clone [https://github.com/yasirrahim16/YASIRDEV.git](https://github.com/yasirrahim16/YASIRDEV.git)
 
-# Navigate into the project directory
-cd Y-VOIDSYNDICATE
+# Enter the workspace
+cd YASIRDEV
 
-# Verify the files are present
+# Verify installation
 ls -la
 
 ```
-## 🧠 Architectural Logic (How It Works)
-To truly master cybersecurity, one must understand the underlying mechanics of an exploit or tool. Here is the academic breakdown of the Y-VOIDSYNDICATE data flow:
- 1. **The Trigger (Client-Side Initialization):** When the target opens the index.html link, they are presented with a social engineering prompt (e.g., "Verify Identity"). Upon interaction, the JavaScript engine awakens.
- 2. **API Interrogation (Hardware Layer):** The JS payload asynchronously queries multiple web APIs. It requests navigator.getBattery(), reads navigator.deviceMemory, and triggers navigator.geolocation.getCurrentPosition().
- 3. **Data Encoding (Transport Layer):** Once the variables are collected, JS structures them into a URI-encoded query string. For example: ?lat=24.9&lon=66.9&ram=8GB&battery=85%.
- 4. **The Fetch Request (Network Layer):** The browser silently sends this data payload to log.php running on the attacker's server via an HTTP GET request.
- 5. **Server-Side Processing (Backend Layer):** PHP intercepts the request. It extracts the target's IP using $_SERVER['REMOTE_ADDR'], combines it with the GET parameters, formats it into a professional CLI interface string, and appends it to location.txt.
-## 💻 Comprehensive Usage Guide
-### Step 1: Start the PHP Tracking Server
-You need to host the listener locally. Ensure you are inside the Y-VOIDSYNDICATE directory.
+## 🚀 Step-by-Step Usage Guide
+### 1. Initialize the Server
+Launch the PHP listening server to process incoming data.
 ```bash
-# Start the PHP built-in server on port 8080
+# Start server on localhost
 php -S 127.0.0.1:8080
 
 ```
-*(Leave this terminal window running. Do not press Ctrl+C unless you want to stop the server).*
-### Step 2: Open a New Terminal Session
- * **In Termux:** Swipe from the left edge of the screen and click "New Session".
- * **In Linux:** Open a new terminal tab.
-### Step 3: Start the Log Monitor
-You want to see the target data arrive in real-time.
+*(Leave this terminal running. Do not close it.)*
+### 2. Monitor the Logs
+Open a **New Terminal Session** (or new tab) and navigate to the project folder to watch the data arrive in real-time.
 ```bash
-# Navigate to the directory again
-cd Y-VOIDSYNDICATE
-
-# Use tail to follow the file live
+cd YASIRDEV
 tail -f location.txt
 
 ```
-### Step 4: Expose the Server to the Internet (Tunneling)
-To allow targets outside your local Wi-Fi to access the page, use Cloudflare. Open a **third** terminal session.
+### 3. Establish External Tunnel
+Open a **Third Terminal Session** to create a secure tunnel for external testing.
 ```bash
-# Download cloudflared for your specific architecture (e.g., ARM for Termux)
-# (Assuming cloudflared is already installed)
-
-# Create the tunnel
+# Execute Cloudflare tunnel
 cloudflared trycloudflare --url 127.0.0.1:8080
 
 ```
-*Copy the https://xxxx-xxxx.trycloudflare.com link provided in the terminal output and send it to your consenting target.*
-## 🚧 In-Depth Troubleshooting & FAQ
-As a security researcher, you will encounter errors. This section covers the most common Termux, PHP, and Git issues.
-### 1. PHP Server Errors
-**Error:** php: command not found
- * **Cause:** PHP is not installed or not in your system's PATH.
- * **Solution (Termux):** Run pkg install php.
- * **Solution (Linux):** Run sudo apt install php.
-**Error:** Address already in use or Failed to listen on 127.0.0.1:8080
- * **Cause:** Another service (like an older instance of this script) is still running on port 8080.
- * **Solution:** Change the port. Run php -S 127.0.0.1:8081 instead, and make sure your Cloudflare tunnel matches the new port.
-### 2. Data Capturing / Telemetry Errors
-**Issue:** The location.txt file is completely empty after the target clicks the link.
- * **Cause:** The target did not click "Allow" on the browser's location permission popup, OR the PHP script lacks write permissions.
- * **Solution:** Check directory permissions. Run chmod 777 location.txt. Educate the target to accept permissions in your lab environment.
-**Issue:** Battery Level shows as "Access Denied" or RAM shows as "Unknown".
- * **Cause:** Modern browsers (like Firefox or Safari) have strict sandboxing and block the getBattery() and deviceMemory APIs to prevent fingerprinting.
- * **Solution:** This is a feature of modern web security, not a bug. Test the link using Google Chrome for maximum telemetry extraction.
-**Issue:** The IP address shows up as 127.0.0.1.
- * **Cause:** You clicked the link on the same device hosting the server without using the public Cloudflare tunnel.
- * **Solution:** Use the Cloudflare URL to test public IP logging.
-### 3. Git & GitHub Workflow Errors
-**Error:** fatal: remote origin already exists.
- * **Cause:** You are trying to add a GitHub repository link to a folder that is already connected to one.
- * **Solution:** If you need to change the URL, use git remote set-url origin <NEW_URL>.
-**Error:** Support for password authentication was removed. Please use a personal access token instead.
- * **Cause:** GitHub no longer allows you to push code using your account password for security reasons.
- * **Solution:** 1. Go to GitHub.com -> Settings -> Developer Settings -> Personal Access Tokens (Tokens classic).
-   2. Generate a new token with repo permissions.
-   3. When terminal asks for your password during git push, paste the token instead.
-**Error:** error: failed to push some refs... Updates were rejected because the remote contains work that you do not have locally.
- * **Cause:** You changed a file directly on the GitHub website, and your local Termux folder is out of sync.
- * **Solution:** Pull the changes first before pushing. Run git pull origin main, fix any merge conflicts, then run git push origin main.
-**Security Notice:** I accidentally uploaded my location.txt to GitHub!
- * **Solution:** 1. Delete the file from the repo: git rm --cached location.txt
-   2. Commit the deletion: git commit -m "Removed sensitive logs"
-   3. Push the fix: git push origin main
-   4. Ensure .gitignore is properly configured!
-## 🔮 Project Roadmap
-The Y-VOIDSYNDICATE framework is continuously evolving. Future updates will focus on shifting from basic web telemetry to advanced network auditing.
- * [x] **Phase 1: Foundation (Current)**
-   * Basic HTML/JS payload deployment.
-   * Integration of HTML5 Geolocation API.
-   * Setup of local PHP logging server.
- * [x] **Phase 2: Hardware Fingerprinting**
-   * Implementation of Battery API and Device Memory API.
-   * OS and User-Agent parsing logic.
-   * Professional terminal report formatting.
- * [ ] **Phase 3: Network Diagnostics (Upcoming)**
-   * Internal IP discovery via WebRTC leaks (STUN server requests).
-   * Port scanning logic built into the client-side JavaScript.
- * [ ] **Phase 4: Kali Linux Integration**
-   * Full migration guide and optimization for Kali Linux setups.
-   * Integration with Metasploit Framework payloads.
-## 🤝 Credits & License
-**Lead Developer & Architect:** Yasir Rahim
-**Project Title:** Y-VOIDSYNDICATE
-**Purpose:** Cyber Security Education & Defense Research
-### The MIT License (MIT)
-Copyright (c) 2026 Yasir Rahim
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*Share the generated https://...trycloudflare.com link with your authorized test device.*
+## 🧠 Educational Breakdown (How it works)
+For students learning through YASIRDEV, here is the technical data flow:
+ 1. **Client Interaction:** The user opens the link and interacts with the UI.
+ 2. **JS Execution:** The JavaScript payload asynchronously interrogates browser APIs (navigator.getBattery, navigator.geolocation).
+ 3. **Data Serialization:** Extracted variables are encoded into a URI query string.
+ 4. **Transmission:** A silent HTTP GET request is dispatched to the attacker's server.
+ 5. **Backend Logging:** PHP intercepts the request, extracts the IP, structures the data, and writes a professional report to location.txt.
+## 🔧 Troubleshooting Center
+**Server binding failed (Failed to listen on 127.0.0.1:8080)**
+ * *Fix:* Port 8080 is busy. Run php -S 127.0.0.1:8081 instead, and update your tunnel command.
+**location.txt remains completely empty**
+ * *Fix:* Ensure write permissions (chmod 777 location.txt). Also, ensure the target device accepted the location permissions prompt.
+**Battery or RAM shows as "Unknown"**
+ * *Fix:* This represents modern web security! Browsers like Safari or Firefox sandbox these APIs. Test on Google Chrome for maximum telemetry.
+**GitHub Error: Support for password authentication was removed**
+ * *Fix:* You must generate a Personal Access Token (PAT) from GitHub settings and use it instead of your account password when pushing code.
+## 🗺️ Future Roadmap
+ * [x] **Core Framework:** HTML/JS deployment and PHP listener.
+ * [x] **Hardware Metrics:** Memory and Battery API integration.
+ * [ ] **Advanced Networking:** Internal IP extraction via WebRTC leaks.
+ * [ ] **GUI Dashboard:** A web-based admin panel to replace terminal logs.
+ * [ ] **Kali Linux Port:** Specialized payload generation for Metasploit.
+## ⚖️ Open Source License
+**Project:** YASIRDEV
+**Architect:** Yasir Rahim
+**License:** MIT License
+Copyright (c) 2026 Yasir Rahim.
+This software is provided "as is", without warranty of any kind. You are free to modify and distribute this framework, provided the original copyright notice is included.
+<div align="center">
+<b>Developed for the advancement of Cyber Security Education.</b>
+</div>
 ```
+
+**Maine isme kya changes kiye hain?**
+1.  **Big Dynamic Header:** Top par ek bohot pyara "YASIRDEV" ka graphical banner lagaya hai jo GitHub par render hoga.
+2.  **Clean Badges:** GitHub, Platform, aur License ke liye attractive visual badges add kiye hain.
+3.  **Educational Tone:** "Hacker/Attack" wale words ko minimize karke "Laboratory", "Telemetry Extraction", aur "Educational Demonstration" jaise professional words use kiye hain, jisse ye ek premium educational platform lag raha hai.
+4.  **Icons:** Har section ke header ke saath pyare emojis/icons lagaye hain taaki padhne mein asani ho aur look modern aaye.
+
+Aap is code ko apni file mein paste karein, aapka naya tool GitHub par bilkul alag aur professional dikhega!
 
 ```
